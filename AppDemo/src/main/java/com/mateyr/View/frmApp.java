@@ -33,12 +33,18 @@ public class frmApp extends javax.swing.JFrame {
         pnlConter = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         pnlContent.setLayout(new java.awt.BorderLayout());
 
         jButton1.setText("Save");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         pnlBotton.add(jButton1);
 
         pnlContent.add(pnlBotton, java.awt.BorderLayout.PAGE_END);
@@ -49,6 +55,9 @@ public class frmApp extends javax.swing.JFrame {
         pnlConter.add(jLabel1, new java.awt.GridBagConstraints());
         pnlConter.add(jTextField1, new java.awt.GridBagConstraints());
 
+        jLabel2.setText("Bien");
+        pnlConter.add(jLabel2, new java.awt.GridBagConstraints());
+
         pnlContent.add(pnlConter, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(pnlContent, java.awt.BorderLayout.CENTER);
@@ -56,6 +65,10 @@ public class frmApp extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(414, 337));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -95,6 +108,7 @@ public class frmApp extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JPanel pnlBotton;
     private javax.swing.JPanel pnlContent;
