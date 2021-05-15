@@ -28,23 +28,33 @@ public class frmApp extends javax.swing.JFrame {
     private void initComponents() {
 
         pnlContent = new javax.swing.JPanel();
+        pnlBotton = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        pnlConter = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout pnlContentLayout = new javax.swing.GroupLayout(pnlContent);
-        pnlContent.setLayout(pnlContentLayout);
-        pnlContentLayout.setHorizontalGroup(
-            pnlContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        pnlContentLayout.setVerticalGroup(
-            pnlContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        pnlContent.setLayout(new java.awt.BorderLayout());
+
+        jButton1.setText("Save");
+        pnlBotton.add(jButton1);
+
+        pnlContent.add(pnlBotton, java.awt.BorderLayout.PAGE_END);
+
+        pnlConter.setLayout(new java.awt.GridBagLayout());
+
+        jLabel1.setText("Name :");
+        pnlConter.add(jLabel1, new java.awt.GridBagConstraints());
+        pnlConter.add(jTextField1, new java.awt.GridBagConstraints());
+
+        pnlContent.add(pnlConter, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(pnlContent, java.awt.BorderLayout.CENTER);
 
-        pack();
+        setSize(new java.awt.Dimension(414, 337));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -83,6 +93,11 @@ public class frmApp extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JPanel pnlBotton;
     private javax.swing.JPanel pnlContent;
+    private javax.swing.JPanel pnlConter;
     // End of variables declaration//GEN-END:variables
 }
